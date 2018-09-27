@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Изучение JavaScript</title>
+</head>
+<body>
+  <script>
+  if( 1 == 1) {
+    document.write ("1 is 1" + "<br>");
+  }
+  if (1 != 1 ){
+    document.write ("error" + "<br>");
+
+  } else {
+    document.write ("1 is only 1!!!" + "<br>");
+
+  }
+  //Cycles
+  var i = 0;
+  do {
+    document.write (i + "<br>");
+    i++;
+  } while (i < 10);
+
+  while (i < 10) {
+    document.write (i + "<br>");
+    i++;
+  }
+
+  for (var i = 100; i > 10; i-=10) {
+    document.write (i + "<br>");
+  }
+
+  // Arrays
+
+  var colors = new Array ("Red", "Blue", "Green");
+  colors[3] = "Grey";
+  colors.push("Blue");
+  document.write (colors[2] + colors[3] + colors[4]);
+  for (var i = 0; i < colors.length(); i++) {
+    document.write (colors[i] + "<br>");
+  }
+  // alert ("Hello, World!")
+
+/** Mathematical operations
+
+  var firstNum = 12;
+  var secondNum = 24;
+  firstNum %=2;
+  firstNum --;
+  document.write ("Результат: ", firstNum + secondNum + "<br>");
+  document.write (Math.PI + "<br>");
+  document.write (Math.ceil (2.01)+ "<br>");
+  document.write (Math.floor (1.99)+ "<br>");
+  document.write (Math.abs(-5)+ "<br>");
+  /
+
+  /** Primitive operations
+  var num = "1.45";
+  var Num = 23;
+  var num2 = "String";
+  var bool = true;
+
+  // alert (num);
+  console.log (num);
+  console.log (bool);
+  var name = prompt ("Как вас зовут?");
+  console.log (bool);
+  var name =
+  console.log ("Ваше имя: " + name);
+  **/
+
+</script>
+
+</body>
+</html>
