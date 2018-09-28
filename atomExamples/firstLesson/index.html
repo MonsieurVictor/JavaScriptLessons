@@ -8,16 +8,19 @@
   <title>Изучение JavaScript</title>
 </head>
 <body>
+  <p id = "text"> Какой-нибудь текст </p>
+
   <script>
-  if( 1 == 1) {
+
+  if(1 == 1) {
     document.write ("1 is 1" + "<br>");
   }
-  if (1 != 1 ){
+
+  if (1 != 1) {
     document.write ("error" + "<br>");
 
   } else {
     document.write ("1 is only 1!!!" + "<br>");
-
   }
   //Cycles
   var i = 0;
@@ -38,12 +41,91 @@
   // Arrays
 
   var colors = new Array ("Red", "Blue", "Green");
+
   colors[3] = "Grey";
   colors.push("Blue");
   document.write (colors[2] + colors[3] + colors[4]);
-  for (var i = 0; i < colors.length(); i++) {
+  for (var i = 0; i < colors.length; i++) {
     document.write (colors[i] + "<br>");
   }
+
+  var caseNumber = 3;
+  switch (caseNumber) {
+    case 3:
+      document.write ("caseNumber is 3");
+      break;
+    case 4:
+      document.write ("caseNumber is 4");
+      break;
+    case 5:
+      document.write ("caseNumber is 5");
+      break;
+    default:
+      document.write ("caseNumber is unknown!");
+  }
+// Let's writte Hello World via function
+  function write2 (word) {
+    document.write (word);
+  }
+
+  write2 ("<br>");
+  write2 ("Hello");
+  write2 ("<br>");
+  write2 ("World!");
+  write2 ("<br>");
+
+  function summ (a, b) {
+    return a + b;
+  }
+  document.write ("23 + 34 =");
+  document.write (summ (23, 34) + "<br>");
+
+  var person = {
+    firstName: 'Brad ',
+    children: ['Liza ', 'Petya '],
+    age: 23,
+    address: {
+      street: '555 Some street ',
+      city: 'Boston ',
+      state: 'NY '
+    },
+    nameAge: function() {
+      return this.firstName +", age is: " + this.age;
+    }
+  }
+
+  document.write (person.firstName
+    + person.children[0]
+    + person.address.street
+    + person.nameAge());
+  console.log (person.nameAge());
+
+  document.write ("<br>");
+
+
+
+
+
+
+  function Fruit (color, shape) {
+    this.color = color;
+    this.shape = shape;
+  }
+
+  var melon = new Fruit ('yellow', 'round');
+  var apple = new Fruit ('red', 'round');
+
+
+  // var apple = new Object();
+  // apple.color = 'green';
+  // apple.shape = 'round';
+
+  apple.describe = function() {
+    return 'An apple is ' + this.color;
+  }
+
+  document.write (apple.describe());
+
   // alert ("Hello, World!")
 
 /** Mathematical operations
