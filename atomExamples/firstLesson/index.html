@@ -8,10 +8,14 @@
   <title>Изучение JavaScript</title>
 </head>
 <body>
-  <p id = "text" > Какой-нибудь текст </p>
+  <p id = "text" > Hello! Here is first simple examples in JavaScript </p>
+
+  <br>
+  <!--Color changing  -->
   <button onmouseover = "changeColor('blue');">Синий</button>
   <button onclick = "changeColor('red');">Красный</button>
   <br>
+  <!--Simple forms test, asking Name and Tel  -->
   <form name="myForm" action="" onsubmit = "return validateForm()" method="post">
     Имя: <input type = "text" name = "fname">
     Телефон: <input type = "text" name = "ftel">
@@ -20,12 +24,14 @@
 
 
   <script>
-
+      // Color changing
+    document.write ("<br>" + "1. Color changing: " + "<br>");
     function changeColor (newColor){
       var element = document.getElementById("text");
       element.style.color = newColor;
     }
 
+    // Simple condition if/else test
     if(1 == 1) {
       document.write ("1 is 1" + "<br>");
     }
@@ -37,7 +43,25 @@
       document.write ("1 is only 1!!!" + "<br>");
     }
 
+    // Cases
+    document.write ("<br>" + "2. Cases: " + "<br>");
+    var caseNumber = 3;
+    switch (caseNumber) {
+      case 3:
+        document.write ("caseNumber is 3");
+        break;
+      case 4:
+        document.write ("caseNumber is 4");
+        break;
+      case 5:
+        document.write ("caseNumber is 5");
+        break;
+      default:
+        document.write ("caseNumber is unknown!");
+    }
 
+    // Simple forms test, asking Name and Tel
+    document.write ("<br>" + "<br>" + "3. Simple forms test, asking Name and Tel: " + "<br>");
     function validateForm (){
       var userName = document.forms["myForm"]["fname"].value;
       var tel = document.forms["myForm"]["ftel"].value;
@@ -54,11 +78,10 @@
       }
     }
 
-
-
-
-    //Cycles
+    // Cycles
+    document.write ("<br>" + "<br>" + "4. Cycles: " + "<br>");
     var i = 0;
+
     do {
       document.write (i + "<br>");
       i++;
@@ -74,7 +97,7 @@
     }
 
     // Arrays
-
+    document.write ("<br>" + "<br>" + "5. Arrays: " + "<br>");
     var colors = new Array ("Red", "Blue", "Green");
 
     colors[3] = "Grey";
@@ -84,21 +107,10 @@
       document.write (colors[i] + "<br>");
     }
 
-    var caseNumber = 3;
-    switch (caseNumber) {
-      case 3:
-        document.write ("caseNumber is 3");
-        break;
-      case 4:
-        document.write ("caseNumber is 4");
-        break;
-      case 5:
-        document.write ("caseNumber is 5");
-        break;
-      default:
-        document.write ("caseNumber is unknown!");
-    }
-  // Let's writte Hello World via function
+
+  // Let's write Hello World via function
+
+  document.write ("<br>" + "<br>" + "6. Let's writte Hello World via function: " + "<br>");
     function write2 (word) {
       document.write (word);
     }
@@ -109,12 +121,17 @@
     write2 ("World!");
     write2 ("<br>");
 
+    // Simple summ function
+    document.write ("<br>" + "<br>" + "7. Simple summ function: " + "<br>");
+
     function summ (a, b) {
       return a + b;
     }
     document.write ("23 + 34 =");
     document.write (summ (23, 34) + "<br>");
 
+    // Simple constructor
+    document.write ("<br>" + "<br>" + "8. Simple constructor: " + "<br>");
     var person = {
       firstName: 'Brad ',
       children: ['Liza ', 'Petya '],
@@ -138,10 +155,9 @@
     document.write ("<br>");
 
 
+    // Another constructor
 
-
-
-
+    document.write ("<br>" + "<br>" + "9. Another constructor: " + "<br>");
     function Fruit (color, shape) {
       this.color = color;
       this.shape = shape;
@@ -151,9 +167,9 @@
     var apple = new Fruit ('red', 'round');
 
 
-    // var apple = new Object();
-    // apple.color = 'green';
-    // apple.shape = 'round';
+    var apple = new Object();
+    apple.color = 'green';
+    apple.shape = 'round';
 
     apple.describe = function() {
       return 'An apple is ' + this.color;
@@ -161,9 +177,9 @@
 
     document.write (apple.describe());
 
-    // alert ("Hello, World!")
+   // Mathematical operations
 
-  /** Mathematical operations
+    document.write ("<br>" + "<br>" + "10. Mathematical operations: " + "<br>");
 
     var firstNum = 12;
     var secondNum = 24;
@@ -174,22 +190,21 @@
     document.write (Math.ceil (2.01)+ "<br>");
     document.write (Math.floor (1.99)+ "<br>");
     document.write (Math.abs(-5)+ "<br>");
-    /
+   //
+    // Primitive operations, look result in console.log
 
-    /** Primitive operations
+    document.write ("<br>" + "<br>" + "11. Primitive operations, look result in console.log: " + "<br>");
     var num = "1.45";
     var Num = 23;
     var num2 = "String";
     var bool = true;
 
-    // alert (num);
+
     console.log (num);
     console.log (bool);
     var name = prompt ("Как вас зовут?");
     console.log (bool);
-    var name =
     console.log ("Ваше имя: " + name);
-    **/
 
 </script>
 
