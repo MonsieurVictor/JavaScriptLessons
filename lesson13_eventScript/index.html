@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <script type="text/javascript">
+        function buttonClick (button){
+            alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + " , также value равно " + button.value + ".")
+            }
+    </script>
+        function countOnMouseOver (element) {
+            element.innerHTML = "На этот текст был наведен курсор
+</head>
+<body onload = "alert('Страница загружена')">
+    <input type="button" name="b" value="Click me!" onclick="buttonClick (this)" />
+    <span onmouseover="countOnMouseOver (this)"> На этот текст был наведен курсор 0 раз</span>
+</body>
+</html>

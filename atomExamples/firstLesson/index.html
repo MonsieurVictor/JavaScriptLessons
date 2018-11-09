@@ -1,81 +1,86 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Изучение JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" href="JavaScript.js"></script>
+    <title>Изучение JavaScript</title>
 </head>
+
 <body>
-  <p id = "text" > Hello! Here is first simple examples in JavaScript </p>
+    IsJavaScript working?
+    <noscript>No!</noscript>
+    Yes!
+    <p id = "text" > Hello! Here is first simple examples in JavaScript.  </p>
 
-  <br>
-  <!--Color changing  -->
-  <button onmouseover = "changeColor('blue');">Синий</button>
-  <button onclick = "changeColor('red');">Красный</button>
-  <br>
-  <!--Simple forms test, asking Name and Tel  -->
-  <form name="myForm" action="" onsubmit = "return validateForm()" method="post">
-    Имя: <input type = "text" name = "fname">
-    Телефон: <input type = "text" name = "ftel">
-    <input type = "submit" value = "Submit">
-  </form>
+    <br>
+    <!--Color changing  -->
+    <button onmouseover = "changeColor('blue');">Синий</button>
+    <button onclick = "changeColor('red');">Красный</button>
+    <br>
+    <!--Simple forms test, asking Name and Tel  -->
+    <form name="myForm" action="" onsubmit = "return validateForm()" method="post">
+        Имя: <input type = "text" name = "fname">
+        Телефон: <input type = "text" name = "ftel">
+        <input type = "submit" value = "Submit">
+    </form>
 
 
-  <script>
+    <script>
       // Color changing
-    document.write ("<br>" + "1. Color changing: " + "<br>");
+    document.write ("<br>" + "1. Color changing: color is changed using the buttons above. " + "<br>");
     function changeColor (newColor){
-      var element = document.getElementById("text");
-      element.style.color = newColor;
+        var element = document.getElementById("text");
+        element.style.color = newColor;
     }
 
     // Simple condition if/else test
     if(1 == 1) {
-      document.write ("1 is 1" + "<br>");
+        document.write ("1 is 1" + "<br>");
     }
 
     if (1 != 1) {
-      document.write ("error" + "<br>");
+        document.write ("error" + "<br>");
 
     } else {
-      document.write ("1 is only 1!!!" + "<br>");
+        document.write ("1 is only 1!!!" + "<br>");
     }
 
     // Cases
     document.write ("<br>" + "2. Cases: " + "<br>");
     var caseNumber = 3;
     switch (caseNumber) {
-      case 3:
-        document.write ("caseNumber is 3");
-        break;
-      case 4:
-        document.write ("caseNumber is 4");
-        break;
-      case 5:
-        document.write ("caseNumber is 5");
-        break;
-      default:
-        document.write ("caseNumber is unknown!");
+        case 3:
+            document.write ("caseNumber is 3");
+            break;
+        case 4:
+            document.write ("caseNumber is 4");
+            break;
+        case 5:
+            document.write ("caseNumber is 5");
+            break;
+        default:
+            document.write ("caseNumber is unknown!");
     }
 
     // Simple forms test, asking Name and Tel
     document.write ("<br>" + "<br>" + "3. Simple forms test, asking Name and Tel: " + "<br>");
     function validateForm (){
-      var userName = document.forms["myForm"]["fname"].value;
-      var tel = document.forms["myForm"]["ftel"].value;
+        var userName = document.forms["myForm"]["fname"].value;
+        var tel = document.forms["myForm"]["ftel"].value;
 
-      if (userName == "") {
-        alert ("Имя должно быть заполнено");
+        if (userName == "") {
+            alert ("Имя должно быть заполнено");
         return false;
-      } else if (tel =="" ) {
-        alert ("Укажите Ваш телефон:");
+        } else if (tel =="" ) {
+            alert ("Укажите Ваш телефон:");
         return false;
 
-      } else {
-        alert ("Спасибо за регистрацию! Ваше имя - " + userName + ". Ваш телефон - " + tel);
-      }
+        } else {
+            alert ("Спасибо за регистрацию! Ваше имя - " + userName + ". Ваш телефон - " + tel);
+        }
     }
 
     // Cycles
@@ -83,17 +88,17 @@
     var i = 0;
 
     do {
-      document.write (i + "<br>");
+        document.write (i + "<br>");
       i++;
     } while (i < 10);
 
     while (i < 10) {
-      document.write (i + "<br>");
+        document.write (i + "<br>");
       i++;
     }
 
     for (var i = 100; i > 10; i-=10) {
-      document.write (i + "<br>");
+        document.write (i + "<br>");
     }
 
     // Arrays
@@ -102,30 +107,51 @@
 
     colors[3] = "Grey";
     colors.push("Blue");
-    document.write (colors[2] + colors[3] + colors[4]);
+    document.write (colors[2] + " " + colors[3] + " " + colors[4] + "<br>" + "<br>");
     for (var i = 0; i < colors.length; i++) {
-      document.write (colors[i] + "<br>");
+        document.write (colors[i] + "<br>");
+    }
+
+    // 2D-Arrays
+
+    document.write("<br />" + "2-мерные массивы" + "<br />");
+    var arr1 = new Array();
+    var arr2 = new Array();
+    var arr3 = new Array();
+    for(var i = 0; i < 5; i++) {arr1[i] = i;}
+    for(var i = 0; i < 10; i++) {arr2[i] = i;}
+    for(var i = 0; i < 15; i++) {arr3[i] = i;}
+    var arr = new Array(arr1, arr2, arr3);
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr[i].length; j++) {
+            document.write(arr[i][j] + " ")
+        }
+        document.write("<br />");
     }
 
 
-  // Let's write Hello World via function
 
-  document.write ("<br>" + "<br>" + "6. Let's writte Hello World via function: " + "<br>");
-    function write2 (word) {
-      document.write (word);
+
+
+
+    // Let's write Hello World via function
+
+    document.write ("<br>" + "<br>" + "6. Let's writte Hello World via function: " + "<br>");
+    function print (word) {
+        document.write (word);
     }
 
-    write2 ("<br>");
-    write2 ("Hello");
-    write2 ("<br>");
-    write2 ("World!");
-    write2 ("<br>");
+    print ("<br>");
+    print ("Hello");
+    print ("<br>");
+    print ("World!");
+    print ("<br>");
 
     // Simple summ function
     document.write ("<br>" + "<br>" + "7. Simple summ function: " + "<br>");
 
     function summ (a, b) {
-      return a + b;
+        return a + b;
     }
     document.write ("23 + 34 =");
     document.write (summ (23, 34) + "<br>");
@@ -133,17 +159,17 @@
     // Simple constructor
     document.write ("<br>" + "<br>" + "8. Simple constructor: " + "<br>");
     var person = {
-      firstName: 'Brad ',
-      children: ['Liza ', 'Petya '],
-      age: 23,
-      address: {
+        firstName: 'Brad ',
+        children: ['Liza ', 'Petya '],
+        age: 23,
+        address: {
         street: '555 Some street ',
         city: 'Boston ',
         state: 'NY '
-      },
-      nameAge: function() {
+        },
+        nameAge: function() {
         return this.firstName +", age is: " + this.age;
-      }
+        }
     }
 
     document.write (person.firstName
@@ -159,8 +185,8 @@
 
     document.write ("<br>" + "<br>" + "9. Another constructor: " + "<br>");
     function Fruit (color, shape) {
-      this.color = color;
-      this.shape = shape;
+        this.color = color;
+        this.shape = shape;
     }
 
     var melon = new Fruit ('yellow', 'round');
@@ -172,12 +198,12 @@
     apple.shape = 'round';
 
     apple.describe = function() {
-      return 'An apple is ' + this.color;
+        return 'An apple is ' + this.color;
     }
 
     document.write (apple.describe());
 
-   // Mathematical operations
+    // Mathematical operations
 
     document.write ("<br>" + "<br>" + "10. Mathematical operations: " + "<br>");
 
@@ -190,7 +216,7 @@
     document.write (Math.ceil (2.01)+ "<br>");
     document.write (Math.floor (1.99)+ "<br>");
     document.write (Math.abs(-5)+ "<br>");
-   //
+    //
     // Primitive operations, look result in console.log
 
     document.write ("<br>" + "<br>" + "11. Primitive operations, look result in console.log: " + "<br>");
@@ -198,13 +224,20 @@
     var Num = 23;
     var num2 = "String";
     var bool = true;
+    console.log (bool);
 
 
     console.log (num);
     console.log (bool);
-    var name = prompt ("Как вас зовут?");
-    console.log (bool);
-    console.log ("Ваше имя: " + name);
+    if(confirm("Создать нового пользователя?")){
+        var name = prompt ("Как Вас зовут?");
+        alert ("Приветствую, " + name + "!");
+        console.log ("Ваше имя: " + name);
+    } else {
+        alert ("Пользователь не создан.")
+    }
+
+
 
 </script>
 
