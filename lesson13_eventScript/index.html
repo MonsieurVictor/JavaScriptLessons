@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Events</title>
-    <script type="text/javascript">
-        function buttonClick (button){
-            alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + " , также value равно " + button.value + ".")
-            }
-    </script>
-        function countOnMouseOver (element) {
-            element.innerHTML = "На этот текст был наведен курсор
+
+
 </head>
-<body onload = "alert('Страница загружена')">
-    <input type="button" name="b" value="Click me!" onclick="buttonClick (this)" />
-    <span onmouseover="countOnMouseOver (this)"> На этот текст был наведен курсор 0 раз</span>
-</body>
+<body>
+<script type="text/javascript">
+    var counter = 0;
+    function clickCounter (button) {
+        alert("Вы нажали на кнопку")
+    }
+
+    function hoverCounter (element) {
+        counter++;
+        element.innerHTML= "На этот текст было наведено " + counter + " раз";
+    }
+
+</script>
+<input id="clickCounter" type="button" name="b" value="Нажми"onclick="clickCounter (this)" />
+<span onmouseover="hoverCounter (this)">На этот текст было наведено 0 раз</span>
+</body>﻿
 </html>
