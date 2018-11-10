@@ -1,0 +1,47 @@
+<!--
+It's a simple forms test
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <script type="text/javascript">
+        function valid (form){
+            var fail = false;
+            var nameInAlert = form.nameValue.value;
+            if (nameInAlert == "" || name == " ")
+                fail = " Ва не ввели свое имя";
+            if (fail) {
+                alert(fail);
+                return false;
+            } else {
+                alert(form.nameValue.value);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post" name="test" onsubmit="valid(this)">
+        <label for="name"> Имя:</label>
+        <input type="text" name="nameValue" placeholder="Имя" id="name" /> <br /> <br />
+
+        <label for="password"> Пароль;</label>
+        <input type="password" name="passwordValue" placeholder="Пароль" id="password" /> <br /> <br />
+
+        <label for="rePassword"> Проверка пароля;</label>
+        <input type="password" name="rePasswordValue" placeholder="Введите пароль еще раз" id="rePassword" />
+
+        <br /> <br />
+        <span>Пол</span>
+        <input type="radio" name="stateValue" id="state" value="Муж"/>
+
+        <label> Мужской </label>
+        <input type="radio" name="stateValue" id="state" value="Женский"/>
+
+        <label> Женский </label> <br /> <br />
+        <input type="submit" name="state"value="Готово"/>
+
+    </form>
+</body>
+</html>

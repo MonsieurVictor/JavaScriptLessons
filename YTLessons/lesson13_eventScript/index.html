@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <script type="text/javascript">
+        var counter = 0;
+        function clickCounter (button) {
+            alert("Вы нажали на кнопку")
+        }
+
+        function hoverCounter (element) {
+            counter++;
+            element.innerHTML= "На этот текст было наведено " + counter + " раз";
+        }
+    </script>
+</head>
+<body>
+
+<input id="clickCounter" type="button" name="b" value="Нажми"onclick="clickCounter (this)" />
+<span onmouseover="hoverCounter (this)">На этот текст было наведено 0 раз</span>
+</body>﻿
+</html>
