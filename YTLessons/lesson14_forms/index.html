@@ -5,43 +5,50 @@ It's a simple forms test
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forms</title>
+    <title>JavaScript Обработка форм</title>
     <script type="text/javascript">
-        function valid (form){
+
+        function valid (form) {
             var fail = false;
-            var nameInAlert = form.nameValue.value;
-            if (nameInAlert == "" || name == " ")
-                fail = " Ва не ввели свое имя";
-            if (fail) {
+            var name = form.name.value;
+            var password = form.password.value;
+            var RePassword = form.RePassword.value;
+            var state = form.state.value;
+
+            if (name == "" || name == " ")
+                fail = "Вы не ввели свое имя";
+            else if (password == "")
+                fail = "Вы не ввели пароль";
+            else if (password == RePassword)
+                fail = "Пароли не совпадают";
+            else if (state == "")
+                fail = "Укажите пол"
+
+
+            if (fail)
                 alert(fail);
-                return false;
-            } else {
-                alert(form.nameValue.value);
-            }
         }
     </script>
 </head>
 <body>
-    <form action="" method="post" name="test" onsubmit="valid(this)">
-        <label for="name"> Имя:</label>
-        <input type="text" name="nameValue" placeholder="Имя" id="name" /> <br /> <br />
+<form action="" method="post" name="test" id="form">
+    <label for="name">Имя:</label>
+    <input type="text" name="name" placeholder="Имя" id="name" /> <br/><br/>
 
-        <label for="password"> Пароль;</label>
-        <input type="password" name="passwordValue" placeholder="Пароль" id="password" /> <br /> <br />
+    <label for="password">Пароль:</label>
+    <input type="password" name="password" placeholder="Пароль" id="password" /> <br/><br/>
 
-        <label for="rePassword"> Проверка пароля;</label>
-        <input type="password" name="rePasswordValue" placeholder="Введите пароль еще раз" id="rePassword" />
+    <label for="RePassword">Проверка пароля</label>
+    <input type="password" name="RePassword" placeholder="Введите пароль" id="RePassword"/> <br/><br/>
 
-        <br /> <br />
-        <span>Пол</span>
-        <input type="radio" name="stateValue" id="state" value="Муж"/>
+    <span>Укажите пол (ваш)</span>
+    <input type="radio" name="state" id="state1" value="Мужской"/>
+    <label for="state1">Женский</label>
+    <input type="radio" name="state" id="state2" value="Женский"/>
+    <label for="state2">Мужской</label>
+    <br/><br/>
 
-        <label> Мужской </label>
-        <input type="radio" name="stateValue" id="state" value="Женский"/>
-
-        <label> Женский </label> <br /> <br />
-        <input type="submit" name="state"value="Готово"/>
-
-    </form>
+    <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово"/>
+</form>
 </body>
-</html>
+</html>﻿

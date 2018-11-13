@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214b1446-8aa9-4e5e-9a77-8959d20b6f94" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/YTLessons/lesson13_eventScript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YTLessons/lesson14_forms/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atomExamples/firstLesson/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/YTLessons/firstLesson/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atomExamples/firstLesson/javaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/YTLessons/firstLesson/javaScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson13_eventScript/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson13_eventScript/javaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/YTLessons/lesson13_eventScript/javaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YTLessons/lesson14_forms/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/YTLessons/lesson14_forms/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YTLessons/lesson14_forms/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="609">
+              <caret line="41" column="102" lean-forward="true" selection-start-line="41" selection-start-column="102" selection-end-line="41" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -71,7 +66,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1110" />
     <option name="width" value="810" />
     <option name="height" value="1040" />
@@ -153,14 +148,15 @@
       <workItem from="1541753649552" duration="303000" />
       <workItem from="1541777201502" duration="1800000" />
       <workItem from="1541799542712" duration="4804000" />
+      <workItem from="1542109548092" duration="556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18412000" />
+    <option name="totallyTimeSpent" value="18968000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1110" y="0" width="810" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.42708334" />
@@ -189,6 +185,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/YTLessons/lesson14_forms/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/YTLessons/lesson13_eventScript/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -250,8 +253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YTLessons/lesson14_forms/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="609">
+          <caret line="41" column="102" lean-forward="true" selection-start-line="41" selection-start-column="102" selection-end-line="41" selection-end-column="102" />
         </state>
       </provider>
     </entry>
