@@ -11,22 +11,27 @@ It's a simple forms test
         function valid (form) {
             var fail = false;
             var name = form.name.value;
+            var email = form.email.value;
             var password = form.password.value;
-            var RePassword = form.RePassword.value;
-            var state = form.state.value;
+            var rePassword = form.RePassword.value;
+            var sex = form.state.value;
+
+            var adr_pattern = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/;
 
             if (name == "" || name == " ")
                 fail = "Вы не ввели свое имя";
+            if (adr_pattern.test(email) == false)
+                fail = "Вы не ввели корректный email";
             else if (password == "")
                 fail = "Вы не ввели пароль";
-            else if (password == RePassword)
+            else if (password != rePassword)
                 fail = "Пароли не совпадают";
-            else if (state == "")
-                fail = "Укажите пол"
-
+            else if (sex == "")
+                fail = "Укажите пол";
 
             if (fail)
                 alert(fail);
+            else window.location = "http://google.com"
         }
     </script>
 </head>
@@ -35,17 +40,22 @@ It's a simple forms test
     <label for="name">Имя:</label>
     <input type="text" name="name" placeholder="Имя" id="name" /> <br/><br/>
 
+    <label for="email"> Email: </label>
+    <input type="text" name="email" placeholder="Email" id="email"/> <br/><br/>
+
     <label for="password">Пароль:</label>
     <input type="password" name="password" placeholder="Пароль" id="password" /> <br/><br/>
 
     <label for="RePassword">Проверка пароля</label>
     <input type="password" name="RePassword" placeholder="Введите пароль" id="RePassword"/> <br/><br/>
 
-    <span>Укажите пол (ваш)</span>
-    <input type="radio" name="state" id="state1" value="Мужской"/>
-    <label for="state1">Женский</label>
-    <input type="radio" name="state" id="state2" value="Женский"/>
-    <label for="state2">Мужской</label>
+    <span>Укажите Ваш пол </span>
+
+    <input type="radio" name="sex" id="male" value="Мужской"/>
+    <label for="male">Женский</label>
+
+    <input type="radio" name="sex" id="female" value="Женский"/>
+    <label for="female">Мужской</label>
     <br/><br/>
 
     <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово"/>
