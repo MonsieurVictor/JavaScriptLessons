@@ -14,13 +14,13 @@ It's a simple forms test
             var email = form.email.value;
             var password = form.password.value;
             var rePassword = form.RePassword.value;
-            var sex = form.state.value;
+            var sex = form.sex.value;
 
-            var adr_pattern = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/;
+            var adr_pattern = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
 
             if (name == "" || name == " ")
                 fail = "Вы не ввели свое имя";
-            if (adr_pattern.test(email) == false)
+            else if (!adr_pattern.test(email))
                 fail = "Вы не ввели корректный email";
             else if (password == "")
                 fail = "Вы не ввели пароль";
@@ -38,16 +38,16 @@ It's a simple forms test
 <body>
 <form action="" method="post" name="test" id="form">
     <label for="name">Имя:</label>
-    <input type="text" name="name" placeholder="Имя" id="name" /> <br/><br/>
+    <input type="text" required name="name" placeholder="Имя" id="name" /> <br/><br/>
 
     <label for="email"> Email: </label>
-    <input type="text" name="email" placeholder="Email" id="email"/> <br/><br/>
+    <input type="email" required name="email" placeholder="Email" id="email"/> <br/><br/>
 
     <label for="password">Пароль:</label>
-    <input type="password" name="password" placeholder="Пароль" id="password" /> <br/><br/>
+    <input type="password" required name="password" placeholder="Пароль" id="password" /> <br/><br/>
 
     <label for="RePassword">Проверка пароля</label>
-    <input type="password" name="RePassword" placeholder="Введите пароль" id="RePassword"/> <br/><br/>
+    <input type="password" required name="RePassword" placeholder="Введите пароль" id="RePassword"/> <br/><br/>
 
     <span>Укажите Ваш пол </span>
 
